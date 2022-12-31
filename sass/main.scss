@@ -1,0 +1,58 @@
+/*
+COLORS:
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+*/
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/feature-box";
+@import "components/photos";
+@import "components/button";
+@import "components/footer";
+@import "components/card";
+@import "components/stories";
+@import "components/video";
+@import "components/booking";
+@import "components/navigation";
+
+@import "layout/header";
+@import "layout/row";
+@import "layout/popup";
+@import "pages/pages";
+/* polygon(0% 20%, 40% 0%, 60% 30%, 60% 60%, 40% 40%, 0% 40%); */
+
+// .section {
+//   width: 400px;
+//   background-color: $bg-primary;
+// }
+// p {
+//   background-color: red !important  ;
+// }
+// .amazing {
+//   width: 600px;
+//   background-color: aqua;
+// }
+
+// nav {
+//   background-color: $bg-primary;
+//   color: yellowgreen;
+
+//   &ul {
+//     padding-top: 3rem;
+//     position: relative;
+//     text-align: center;
+//     height: 3rem;
+//     &li {
+//       padding-bottom: 2rem;
+//       display: inline-block;
+//       font-size: 2rem;
+//     }
+//   }
+// }

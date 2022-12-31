@@ -1,0 +1,82 @@
+.story {
+  margin: 2rem auto;
+  //background-color: aqua;
+  width: 75%;
+  // height: 20rem;
+  padding: 3rem;
+  //height: 20rem;
+  color: black;
+  border-radius: 3px;
+
+  transform: skewX(-10deg);
+  background-color: rgba(white, 0.4);
+  // & > * {
+  //  transform: skewX(10deg);
+  // }
+
+  //only one tranform function we can apply to element
+
+  //for image we call one transform funcion .So,above method didin't work
+  //  transition: none 5s;
+  //display: inline;
+  // clip-path: polygon(25% 0%, 75% 0%, 90% 45%, 40% 45%);
+  &__shape {
+    // position: relative;
+    margin: auto 0;
+    float: left;
+    height: 15rem;
+    width: 15rem;
+    /// background-color: green;
+    border-radius: 3px;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-1rem) skewX(10deg);
+    backface-visibility: hidden;
+  }
+
+  &__img {
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    //  float: left;
+    margin-left: 0.5rem;
+    bottom: 0.1rem;
+    line-height: 2.4rem;
+    font-size: 1.8rem !important;
+    transform: skewX(10deg);
+
+    //transition: all 0.2s;
+  }
+
+  &__caption {
+    position: absolute;
+    font-size: 1.6rem;
+    color: white;
+    //background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(100%, -100%);
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    //visibility: hidden;
+    transition: all 0.2s;
+    // transform: translateY(-100%);
+  }
+  &:hover &__caption {
+    // visibility: hidden;
+    transform: translate(-30%, -50%);
+    opacity: 1;
+  }
+
+  &:hover &__img {
+    height: 100%;
+    transform: translateX(-1rem);
+    filter: blur(3px);
+    //opacity: 0.3;
+    // transition: all 0.2s;
+  }
+}

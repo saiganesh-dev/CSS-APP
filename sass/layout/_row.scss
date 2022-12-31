@@ -1,0 +1,180 @@
+.transform {
+  transform: translateX(10%);
+}
+
+.specs {
+  margin-top: 2rem;
+  position: relative;
+  height: 2rem;
+  width: 37rem;
+  z-index: -1;
+  border-radius: 0.5rem;
+  background-color: black;
+  &::after {
+    content: "";
+    height: 7rem;
+    width: 15rem;
+    left: 2rem;
+    border-radius: 1rem 1rem 50% 50%;
+    margin-top: -1rem;
+    position: absolute;
+    border: 1px solid black;
+    //  background-color: aqua;
+    box-sizing: border-box;
+    background: linear-gradient(
+      45deg,
+      rgba(125, 186, 187, 1) 0%,
+      rgba(125, 186, 187, 1) 40%,
+      white 40%,
+      white 60%,
+      blueviolet 60%,
+      rgba(225, 225, 225, 1) 100%
+    );
+    background-image: url(../img/lion.jpg);
+    background-position: center;
+    object-fit: cover;
+    // z-index: 1;
+    &::after {
+      position: absolute;
+      height: 10rem;
+      background-color: blue;
+    }
+  }
+  &::before {
+    content: "";
+    height: 7rem;
+    width: 15rem;
+    position: absolute;
+
+    border: 1px solid black;
+    right: 2rem;
+    border-radius: 1rem 1rem 50% 50%;
+    margin-top: -1rem;
+    position: absolute;
+    background: linear-gradient(
+      45deg,
+      blueviolet 0%,
+      blueviolet 40%,
+      white 40%,
+      white 60%,
+      skyblue 60%,
+      skyblue 100%
+    );
+  }
+}
+.phone {
+  font-size: 1.6rem;
+  position: relative;
+  height: 30rem;
+  width: 20rem;
+  border: 0.2em solid black;
+  border-top: 1rem solid black;
+  border-radius: 0.4rem;
+  border-bottom: 3rem solid black;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 1.8rem;
+    border-radius: 4rem;
+    width: 1.8rem;
+    bottom: -2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.row {
+  //background-color: green;
+  max-width: $grid-width;
+  margin: 5rem auto;
+  //background-color: burlywood;
+  //padding: 1rem 0rem;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: $grid-vertical;
+  }
+  @include clearfix;
+
+  @include respond(phone) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  [class^="col-1"] {
+    height: 10rem;
+    &:not(:last-child) {
+      margin-right: $grid-horizontal;
+    }
+    //margin-right: 0%;
+    float: left;
+  }
+}
+.col-1_of_2 {
+  width: calc((100% - #{$grid-horizontal}) / 2);
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  // width: 500px;
+}
+
+.col-1_of_3 {
+  width: calc((100% - #{$grid-horizontal} * 2) / 3);
+  @include respond(phone) {
+    // width: 100%;
+    width: 100% !important;
+    margin-top: 1rem;
+
+    height: 45rem !important;
+    //   border-bottom: 1px solid #ee82ee;
+    :not(:last-child) {
+      margin-bottom: 2rem !important;
+    }
+  }
+}
+.col-1_of_4 {
+  @include respond(phone) {
+    width: 100% !important;
+    margin-top: 1rem;
+    height: 20rem !important;
+    //   border-bottom: 1px solid #ee82ee;
+    margin-bottom: 2rem !important;
+  }
+  width: calc((100% - #{$grid-horizontal} * 3) / 4);
+}
+
+.col-2_of_3 {
+  @include respond(phone) {
+    width: 100% !important;
+  }
+
+  width: calc(2 * (100% - 2 * #{$grid-horizontal}) / 3 + #{$grid-horizontal});
+  background-color: brown;
+  float: left;
+}
+
+// .col-3_of_4 {
+//   width: calc(
+//     3 * (100% - 3 * #{$grid-horizontal}) / 4 + #{$grid-horizontal * 3}
+//   );
+// width: 500px;
+.col-3_of_4 {
+  @include respond(phone) {
+    width: 100% !important;
+  }
+
+  width: calc(
+    3 * (100% - 3 * #{$grid-horizontal}) / 4 + #{$grid-horizontal} * 2
+  );
+  background-color: brown;
+  float: left;
+}
+
+.col-2_of_4 {
+  width: calc((100% - #{$grid-horizontal}* 2) / 2);
+  background-color: blueviolet;
+  @include respond(phone) {
+    width: 100% !important;
+  }
+}

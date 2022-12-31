@@ -1,0 +1,83 @@
+.section-about {
+  margin-top: -13rem;
+  height: 90rem;
+  //  height: 100vh;
+  //  padding: 50rem 0;
+  padding-top: 15rem !important;
+  margin-bottom: rem;
+  background-color: $bg-grey-1;
+  //margin-bottom: 50rem;
+  //  height: 100rem;
+  /// background-clip: text;
+  //-webkit-background-clip: text;
+}
+
+.section-features {
+  transform: skewY(-7deg);
+  font-size: 3.6rem;
+  margin-top: -18rem;
+  padding: 10rem 0;
+  height: 70rem;
+  @include respond(phone) {
+    height: 113rem;
+    padding: 1rem 0;
+    margin-top: -3rem;
+    //  margin: 2rem 0;
+  }
+  background-image: linear-gradient(
+      to top,
+      rgba(brown, 0.1) 40px,
+      transparent 400px
+    ),
+    // linear-gradient(to right, rgba(orange, 0.6), transparent 400px),
+    linear-gradient(to bottom, skyblue, transparent 400px),
+    // linear-gradient(to left, blue, transparent 400px),
+    url(../img/nat-2-large.jpg);
+
+  //> -> Direct Childs i.e only row element
+  //!> -> All child elements
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  background-size: cover;
+  background-position: center;
+  //clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+}
+
+.section-tours {
+  margin: 6rem 0;
+  margin-top: -6rem;
+  padding: 10rem 0rem;
+  height: 84rem;
+  @include respond(phone) {
+    height: 185rem;
+  }
+  background-color: $bg-grey-1;
+}
+.section-stories {
+  margin-top: -16rem;
+  // padding: 5rem 0;
+  position: relative;
+  //  height: auto;
+  overflow: hidden;
+  margin-bottom: 5rem;
+  @include respond(phone) {
+    // height: 270rem;
+    padding-top: 2rem !important;
+  }
+  height: 110rem;
+  //background-color: red;
+}
+
+.section-booking {
+  margin-top: -5rem;
+  background-image: linear-gradient(to bottom left, lightgreen, green);
+  font-size: 2rem;
+  padding: 6rem 0;
+}
+.section-footer {
+  background-color: $bg-light-dark;
+  padding: 10rem 0;
+  // height: 10rem;
+}

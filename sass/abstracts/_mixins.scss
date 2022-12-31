@@ -1,0 +1,35 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+//phone         0-600px phone
+//tab-potrait   600-900px tab-pot
+//tab-landscape 900-1200px tab-land
+//normal range (default) 1200px-1800px normal
+//Large screens  >1800px large
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint==tab-pot {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint==tab-land {
+    @media (max-width:  75em) {
+      @content;
+    }
+  }
+  @if $breakpoint==large {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

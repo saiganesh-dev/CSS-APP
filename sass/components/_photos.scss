@@ -1,0 +1,58 @@
+.composition {
+  position: relative;
+  margin-top: 5rem;
+  @include respond(phone) {
+    margin-top: 20rem !important;
+    margin: 0 1.5rem 0 3rem;
+  }
+
+  width: 80%;
+  &__photo {
+    width: 55%;
+    position: absolute;
+    z-index: 10;
+
+    outline-offset: 2rem;
+    //  box-shadow: 0 3rem 0.5rem rbga(black, 0.6);
+
+    box-shadow: 0rem 0.7rem 1rem rgba(black, 0.6);
+
+    transition: all 0.2s;
+  }
+  &__photo__p1 {
+    top: -2rem;
+    left: 0;
+    &:hover {
+      transform: scale(1.25);
+      z-index: 20;
+      outline: 1rem solid yellow;
+
+      box-shadow: 0rem 3rem 4rem rbga(black, 0.9);
+      //outline: 20px solid $bg-dark-green;
+    }
+  }
+
+  &__photo__p2 {
+    top: 10rem;
+    left: 20%;
+
+    &:hover {
+      transform: scale(1.25);
+      z-index: 20;
+      outline: 1rem solid yellow;
+    }
+  }
+  &__photo__p3 {
+    top: 4rem;
+    left: 55%;
+
+    &:hover {
+      transform: scale(1.25);
+      z-index: 20;
+      outline: 1rem solid yellow;
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
+}

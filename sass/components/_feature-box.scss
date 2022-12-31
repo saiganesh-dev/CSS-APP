@@ -1,0 +1,39 @@
+.feature-box {
+  position: relative;
+  margin: 6rem 0rem;
+  width: 80%;
+  @include respond(phone) {
+    width: 80% !important;
+    text-align: center;
+    height: 20rem;
+    // margin: 2rem auto;
+    padding: 2rem !important;
+    //   margin-bottom: 1.5rem;
+  }
+
+  padding: 4rem 0;
+  // object-fit:;
+  //object-fit: ;
+  text-align: center;
+  background-color: antiquewhite;
+  height: 30rem;
+  margin-left: 2.5rem;
+  margin-right: 0rem;
+  &:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  font-size: 1.4rem !important;
+  transition: all 0.3s;
+  box-shadow: 0rem 1rem 1rem rgba(black, 0.6);
+  &__icon {
+    font-size: 3.6rem;
+    -webkit-background-image: linear-gradient(lightgreen, green);
+    -webkit-background-clip: text;
+    background-image: linear-gradient(lightgreen, green);
+    background-clip: text;
+    color: transparent;
+  }
+  &:hover {
+    transform: translateY(-1.5rem);
+  }
+}

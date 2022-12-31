@@ -1,0 +1,145 @@
+.input {
+  padding: 6rem;
+  font-size: 2rem;
+  background-image: linear-gradient(
+      105deg,
+      rgba(white, 0.7) 0%,
+      rgba(white, 0.7) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  //  background-clip: cover;
+  height: 50rem;
+  //  transition: all 0.3s;
+  background-position: center;
+  //clip-path: center;
+  background-size: cover;
+  &--form-group {
+    //margin-top: 2rem;
+    //    transition: all 0.3s;
+    :first-child {
+      margin: 0.5rem 0rem 0.2rem 0rem;
+    }
+    &:not(:last-child) {
+      @include respond(phone) {
+        margin: 1rem 0;
+      }
+    }
+    //  display: block;
+    height: 7rem;
+    font-size: inherit;
+    &--radio_input {
+      display: none;
+    }
+    &--radio_button {
+      font-size: inherit;
+      width: 49%;
+      margin-top: 0.4rem;
+      //  display: inline-block;
+      //  margin-right: 2rem;
+      &--single {
+        display: inline-block;
+        // padding-top: 2rem;
+        @include respond(phone) {
+          //  display: inline-block !important;
+
+          margin-bottom: 1rem !important;
+          width: 15rem;
+        }
+        &:not(:last-child) {
+          margin-right: 4rem;
+        }
+      }
+      &--label {
+        font-size: 2rem;
+        padding-left: 4rem;
+
+        margin-top: 1rem !important;
+      }
+    }
+
+    &--radio_button--btn {
+      margin-top: 0.5rem;
+      height: 3rem;
+      width: 3rem;
+      display: inline-block;
+      border-radius: 50%;
+      position: absolute;
+      border: 0.4rem solid $bg-light-green;
+      background-color: white;
+      &::after {
+        top: 25%;
+        left: 25%;
+        content: "";
+        display: block;
+        height: 50%;
+        width: 50%;
+        opacity: 0;
+        background-color: $bg-light-green;
+        border-radius: 50%;
+        border: 0.2rem $bg-light-green;
+        position: absolute;
+        transition: all 0.3s;
+      }
+    }
+
+    &--radio_input:checked + &--radio_button--btn::after {
+      opacity: 1;
+    }
+    // &:checked {
+    //   color: red;
+    //   height: 10rem;
+    // }
+
+    ::-webkit-input-placeholder {
+      color: $light-dark;
+      margin-left: 1rem;
+      //padding-left: 1rem;
+    }
+
+    &--txtbox {
+      //    transition: all 0.3s;
+
+      display: block;
+      height: 5rem;
+      padding: 1rem 2rem;
+      width: 40rem;
+      @include respond(phone) {
+        width: 70%;
+      }
+
+      border: 1px white;
+      //margin-bottom: 2rem;
+      // &--test {
+      //   display: none;
+      // }
+      &:focus {
+        // background-color: yellow;
+        outline: none;
+        border-bottom: 2px solid green;
+      }
+      &:focus:invalid {
+        border-bottom: 0.2rem solid red;
+      }
+    }
+    &--text {
+      //  margin-bottom: 1rem;
+
+      height: 2rem;
+      display: block;
+      margin-left: 2rem;
+      color: green;
+      //transform: translateY(-2rem);
+      transition: all 0.3s;
+    }
+    &--input:placeholder-shown + &--text {
+      //background-color: rgb(122, 122, 122);
+      opacity: 0;
+      visibility: hidden;
+      //background-color: aqua;
+      transform: translateY(-2rem);
+    }
+
+    //pad
+  }
+}

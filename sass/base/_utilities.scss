@@ -1,0 +1,81 @@
+.utility-center {
+  text-align: center;
+}
+.utility-left {
+  text-align: left;
+}
+.u-margin-top-very-small {
+  padding-top: 1rem !important;
+}
+.u-margin-top {
+  margin-top: -12rem;
+}
+
+.u-margin-top-2 {
+  margin-top: 2rem;
+  @include respond(phone) {
+    margin-top: 4rem !important;
+  }
+}
+.u-margin-top-small {
+  margin-top: 2rem !important;
+}
+.u-margin-top-medium {
+  margin-top: 4rem !important;
+  @include respond(phone) {
+    margin-top: 4rem !important;
+  }
+}
+.u-margin-top-right-large {
+  margin-top: 30% !important;
+  font-size: 1.3rem !important;
+  @include respond(phone) {
+    margin-top: 2rem !important;
+    //   margin-right: 3rem !important;
+  }
+}
+.u-margin-top-6 {
+  margin-top: 33rem !important;
+  @include respond(phone) {
+    margin-top: 0rem !important;
+  }
+}
+.u-font-size-large {
+  font-size: 2rem !important;
+}
+
+.u-margin-bottom {
+  margin-bottom: 4rem !important;
+}
+.u-margin-bottom-8 {
+  margin-bottom: 8rem;
+  @include respond(phone) {
+    margin-bottom: 4rem;
+  }
+}
+.u-margin-left-2 {
+  margin-left: $margin-left-small !important;
+}
+.u-margin-left-6 {
+  margin-left: 35% !important;
+  @include respond(phone) {
+    margin-left: 9rem !important;
+  }
+}
+.u-margin-left-large {
+  margin-left: 10rem !important;
+  @include respond(phone) {
+    margin-left: 4rem !important;
+  }
+}
+
+.u-margin-left-8 {
+  margin-left: 45% !important;
+}
+.u-margin-right-2 {
+  margin-right: $margin-left-small;
+}
+.display-realtive {
+  margin-top: 32%;
+  margin-bottom: $margin-left-small;
+}
